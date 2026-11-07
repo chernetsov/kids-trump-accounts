@@ -12,6 +12,29 @@ It is a personal family page, not an official Trump Accounts site, and it says s
 - Responsive, keyboard-accessible, and respects "reduce motion".
 - Interactive growth calculator: illustrative only, with clearly stated assumptions.
 
+## Pages
+
+| URL | What it is |
+| --- | --- |
+| `/` | Family page for both girls |
+| `/vera/` | Vera's own landing page, for her birthday invites |
+| `/alisa/` | Alisa's own landing page, for her birthday invites |
+
+Once published, share for example **https://chernetsov.github.io/kids-trump-accounts/vera/**.
+Each child's page uses the same design and text, focused on one girl: "Give Vera a gift that grows", her photo,
+a countdown to her birthday, a calculator for her alone, her Contribute card, and a link to her sister's page.
+Link previews in WhatsApp, Telegram and iMessage show her photo (`assets/img/og-vera.jpg`, `og-alisa.jpg`).
+
+The child pages (`vera/index.html`, `alisa/index.html`) are **generated** from `index.html`. Don't edit them by hand.
+After changing `index.html`, run:
+
+```bash
+python3 tools/build_kid_pages.py
+```
+
+The deploy workflow also runs this script on every publish, so the published pages are always in sync.
+The page-specific wording lives in `assets/js/i18n.js` under the `kid.*` keys.
+
 ## Preview locally
 
 ```bash
@@ -72,8 +95,9 @@ The paths are set in `config.js` under `kids[n].photo`. `focus` (CSS `object-pos
 photo stays visible on the square card crop. If a child has no `photo` entry, the site shows a tasteful
 monogram placeholder instead.
 
-The link preview image for WhatsApp, Telegram and iMessage is `assets/img/og-image.jpg`. Its source is
-`tools/og-image.html`. Re-render it at 1200×630 with any headless browser if you change the photos.
+The link preview images for WhatsApp, Telegram and iMessage are `assets/img/og-image.jpg` (family page) and
+`assets/img/og-<id>.jpg` (each child's page). Their source is `tools/og-image.html` (add `?kid=vera` for a child).
+Re-render them at 1200×630 with any headless browser if you change the photos.
 
 ## Text and translations
 
@@ -96,6 +120,7 @@ From the official pages:
 
 ```
 index.html                 page markup (text comes from i18n.js)
+vera/, alisa/              each child's page, generated from index.html
 assets/css/styles.css      all styles
 assets/js/config.js        ← links, handles, photos, birthdays, calculator defaults
 assets/js/i18n.js          English + Russian text
@@ -104,6 +129,7 @@ assets/photos/             child photos (optimized, metadata stripped)
 assets/qr/                 put QR code images here
 assets/img/                favicon and link-preview image
 tools/optimize_photo.py    photo optimizer (strip EXIF/GPS, crop, resize)
-tools/og-image.html        source of the link-preview image
+tools/build_kid_pages.py   generates vera/ and alisa/ from index.html
+tools/og-image.html        source of the link-preview images
 .github/workflows/pages.yml  GitHub Pages deploy
 ```
