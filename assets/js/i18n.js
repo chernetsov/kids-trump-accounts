@@ -1,0 +1,304 @@
+/* All visible text, in English and Russian. Keys are referenced by data-i18n attributes in index.html. */
+window.I18N = {
+  en: {
+    "meta.title": "Vera & Alisa · A gift that grows",
+    "meta.description":
+      "Instead of toys, help Vera and Alisa grow their Trump Accounts: a long-term investment for their future.",
+    "skip": "Skip to content",
+    "brand": "Vera & Alisa",
+    "nav.about": "What it is",
+    "nav.calc": "Growth",
+    "nav.kids": "The girls",
+    "nav.give": "How to give",
+    "nav.faq": "FAQ",
+    "nav.cta": "Give a gift",
+    "lang.label": "Language",
+
+    "hero.eyebrow": "Birthdays & holidays wish list",
+    "hero.title": "Give a gift that <em>grows</em>.",
+    "hero.lead":
+      "Instead of another toy, consider a contribution to Vera’s or Alisa’s Trump Account. It stays invested for years, so even a small gift today can become something meaningful by the time they’re grown.",
+    "hero.cta1": "Give to Vera or Alisa",
+    "hero.cta2": "See how it grows",
+    "hero.trust": "A personal family page, not an official Trump Accounts site.",
+    "hero.chipToday": "{amount} today",
+    "hero.chipLater": "≈ {amount} when {name} is 30",
+    "hero.chipNote": "Illustration at {rate}% a year",
+    "hero.birthday": "Birthday {date}",
+
+    "about.eyebrow": "What is a Trump Account?",
+    "about.title": "An investment account made for the long run.",
+    "about.lead":
+      "A Trump Account is a new kind of tax-deferred investment account for U.S. children under 18. It follows traditional IRA rules, with a few special ones for kids.",
+    "about.c1.title": "Invested automatically",
+    "about.c1.body":
+      "Every gift is invested, usually within one business day, in a low-cost index fund that tracks the S&P 500: hundreds of the largest U.S. companies.",
+    "about.c2.title": "Grows tax-deferred",
+    "about.c2.body":
+      "No tax on the gains year after year, so more of the money stays invested and keeps compounding.",
+    "about.c3.title": "Hers at 18",
+    "about.c3.body":
+      "The money stays invested until she turns 18. Then the account becomes her traditional IRA: she can keep it growing, or use it under IRA rules, for example for college or a first home.",
+    "about.c4.title": "Up to $5,000 a year",
+    "about.c4.body":
+      "Family and friends together can give up to $5,000 per child per year. Each gift counts toward the calendar year it’s sent.",
+    "about.note":
+      "<strong>Why your gift matters.</strong> Children born in 2025–2028 get a $1,000 starter deposit from the U.S. Treasury. Vera and Alisa were born earlier, so their accounts grow only from family gifts.",
+    "about.sources": "Sources:",
+    "about.src1": "Trump Accounts overview",
+    "about.src2": "Make a contribution",
+
+    "calc.eyebrow": "Growth calculator",
+    "calc.title": "See what one gift could become.",
+    "calc.lead":
+      "Pick an amount and see how it might grow for each girl, based on her age today. Time does most of the work.",
+    "calc.amount": "Your gift",
+    "calc.freq": "How often",
+    "calc.once": "One time",
+    "calc.yearly": "Every year",
+    "calc.yearlyHint": "Yearly gifts continue through the year she turns 17, when contributions close.",
+    "calc.rate": "Assumed annual return",
+    "calc.rateHint": "Illustrative assumption, not a promise.",
+    "calc.real": "Show in today’s dollars",
+    "calc.realHint": "Adjusts for about {rate}% inflation a year.",
+    "calc.given": "You give",
+    "calc.givenShort": "Given",
+    "calc.at": "At {age}",
+    "calc.age": "Age {age}",
+    "calc.now": "{age} years old now",
+    "calc.payments": "{n} yearly gifts",
+    "calc.payment1": "one gift",
+    "calc.summary":
+      "A {amount} {freq} could grow to about <strong>{v18}</strong> by the time {name} is 18, and <strong>{v60}</strong> if she leaves it invested until 60.",
+    "calc.freqOnce": "gift",
+    "calc.freqYearly": "yearly gift",
+    "calc.chartLabel": "Chart of illustrative account value for each girl at ages 18, 30 and 60",
+    "calc.legendGiven": "Total given",
+    "calc.legendValue": "Illustrative value",
+    "calc.disclaimer":
+      "<strong>Illustration only, not a promise.</strong> It assumes the same return every year, which real markets never deliver: values rise and fall and can go down. Broad U.S. stock indexes have historically averaged roughly 10% a year before inflation (about 7% after) over long periods, but past results don’t guarantee future ones. Ignores fund fees (capped at 0.1% a year) and taxes on withdrawal. After 18 it assumes the money simply stays invested.",
+
+    "kids.eyebrow": "Choose who to celebrate",
+    "kids.title": "Meet Vera & Alisa.",
+    "kids.lead": "Each girl has her own account. Tap Contribute or scan her QR code with your phone camera.",
+    "kids.birthday": "Birthday",
+    "kids.next": "Next birthday in {n} days",
+    "kids.next1": "Birthday tomorrow!",
+    "kids.today": "Happy birthday today!",
+    "kids.contribute": "Contribute to {name}’s account",
+    "kids.soon": "Contribution link coming soon",
+    "kids.soonNote": "We’re setting this up. Check back shortly.",
+    "kids.qr": "Scan to give",
+    "kids.qrSoon": "QR code coming soon",
+    "kids.official": "Opens the official Trump Accounts page",
+    "kids.abroad": "Living outside the US?",
+    "kids.photoAlt": "Photo of {name}",
+    "kids.photoSoon": "Photo coming soon",
+
+    "give.eyebrow": "How to give",
+    "give.title": "Two easy ways to give.",
+    "give.us.tag": "In the United States",
+    "give.us.title": "Use the official link",
+    "give.us.s1": "Tap <strong>Contribute</strong> on Vera’s or Alisa’s card, or scan her QR code.",
+    "give.us.s2": "Pay with a U.S. <strong>bank account</strong> or <strong>debit card</strong> on the official Trump Accounts page.",
+    "give.us.s3": "Enter the amount. The page shows how much can still be given this year.",
+    "give.us.note": "Debit card gifts usually arrive within minutes; bank transfers take up to 5 business days.",
+    "give.ab.tag": "Europe & everywhere else",
+    "give.ab.title": "Send it to Misha",
+    "give.ab.lead":
+      "The official page takes U.S. bank accounts and debit cards. From abroad, send your gift to Misha and he’ll add it to the girl’s account.",
+    "give.ab.s1": "Send via <strong>Wise</strong> or <strong>PayPal</strong> (in USD or your own currency).",
+    "give.ab.s2": "In the note, write the girl’s name and occasion, e.g. <em>“Vera, birthday”</em>.",
+    "give.ab.s3": "Misha deposits it into her Trump Account and lets you know.",
+    "give.ab.soon": "details coming soon",
+    "give.ab.copy": "Copy",
+    "give.ab.copied": "Copied",
+    "give.record.title": "Every gift is recorded.",
+    "give.record.body":
+      "We keep a simple log of who gave what and when, so one day Vera and Alisa will know exactly who helped their savings grow.",
+    "give.contact": "Questions? Message Misha",
+
+    "faq.eyebrow": "FAQ",
+    "faq.title": "Good questions.",
+    "faq.q1": "Is it safe?",
+    "faq.a1":
+      "Yes. Trump Accounts are a U.S. Treasury program. The money is held in a dedicated trust account with a registered trustee, trades clear through the DTCC, and investments are protected by SIPC up to $500,000. Like any investment, the value can go down with the market, and SIPC doesn’t cover market losses. Always use the official link or QR code on this page, and never share passwords or one-time codes.",
+    "faq.q2": "Where does the money go?",
+    "faq.a2":
+      "Straight into the girl’s own Trump Account, which legally belongs to her. It’s invested automatically in an S&P 500 index fund. There are no fees to hold the account or to contribute, and the fund’s own fee is capped at 0.1% a year. Mom and Dad manage it until she turns 18, and no one can take money out before then.",
+    "faq.q3": "How much can I give? What are the limits?",
+    "faq.a3":
+      "Any amount you like. Everyone together (family, friends and employers) can give up to <strong>$5,000 per child per year</strong>, and the official page shows how much is still available. A gift counts toward the calendar year it’s sent, so a December gift counts for this year. Contributions close on December 31 of the year she turns 17, so the giving window is shorter than it seems.",
+    "faq.q4": "When can the girls use the money?",
+    "faq.a4":
+      "Not before 18. After that the account becomes her traditional IRA: she can keep investing or make withdrawals. Earnings are taxed as income when withdrawn, and a 10% early-withdrawal tax may apply before age 59½, with exceptions such as college costs or a first home (up to $10,000).",
+    "faq.q5": "Is my gift tax-deductible?",
+    "faq.a5":
+      "No. Gifts from individuals go in after tax, with no deduction. Your gift becomes part of her “basis,” which she can later withdraw tax-free. This isn’t tax advice; for specifics, ask a tax professional.",
+    "faq.q6": "I live outside the US. Can I still give?",
+    "faq.a6":
+      "Absolutely. Send your gift to Misha via Wise or PayPal with the girl’s name in the note, and he’ll add it to her account. See <a href=\"#give\">How to give</a>.",
+    "faq.q7": "Is this an official Trump Accounts website?",
+    "faq.a7":
+      "No. This is a personal page made by Vera and Alisa’s family. We aren’t affiliated with the U.S. Treasury, the IRS, or the Trump Accounts program. For official information, visit <a href=\"https://trumpaccount.com/us/en/support/articles/overview/\" target=\"_blank\" rel=\"noopener\">trumpaccount.com</a>.",
+    "faq.q8": "Can I still bring a little something?",
+    "faq.a8":
+      "Of course! A card, a drawing or a small surprise is always welcome. We’d just love the big gift to be one that keeps growing.",
+
+    "footer.made": "Made with love by Misha & Olya · Austin, Texas",
+    "footer.legal":
+      "A personal family page. Not affiliated with or endorsed by the U.S. Treasury, the IRS, the Trump Accounts program or its partners. Growth figures are hypothetical illustrations, not financial, investment or tax advice.",
+    "footer.top": "Back to top",
+  },
+
+  ru: {
+    "meta.title": "Вера и Алиса · Подарок, который растёт",
+    "meta.description":
+      "Вместо игрушек помогите Вере и Алисе пополнить их счета Trump Account — долгосрочные инвестиции в их будущее.",
+    "skip": "Перейти к содержанию",
+    "brand": "Вера и Алиса",
+    "nav.about": "Что это",
+    "nav.calc": "Рост",
+    "nav.kids": "Девочки",
+    "nav.give": "Как подарить",
+    "nav.faq": "Вопросы",
+    "nav.cta": "Подарить",
+    "lang.label": "Язык",
+
+    "hero.eyebrow": "На дни рождения и праздники",
+    "hero.title": "Подарок, который <em>растёт</em>.",
+    "hero.lead":
+      "Вместо очередной игрушки подарите взнос на счёт Trump Account Веры или Алисы. Деньги будут инвестированы на годы вперёд, и даже небольшой подарок сегодня может превратиться в заметную сумму к тому времени, когда девочки вырастут.",
+    "hero.cta1": "Подарить Вере или Алисе",
+    "hero.cta2": "Посмотреть, как растёт",
+    "hero.trust": "Личная семейная страница, не официальный сайт Trump Accounts.",
+    "hero.chipToday": "{amount} сегодня",
+    "hero.chipLater": "≈ {amount} к 30-летию {nameGen}",
+    "hero.chipNote": "Пример при {rate}% в год",
+    "hero.birthday": "День рождения {date}",
+
+    "about.eyebrow": "Что такое Trump Account?",
+    "about.title": "Инвестиционный счёт на долгую дистанцию.",
+    "about.lead":
+      "Trump Account — новый вид инвестиционного счёта с отсрочкой налогов для детей в США до 18 лет. Он работает по правилам традиционного пенсионного счёта (traditional IRA) с особыми условиями для детей.",
+    "about.c1.title": "Инвестируется автоматически",
+    "about.c1.body":
+      "Каждый взнос обычно в течение одного рабочего дня вкладывается в недорогой индексный фонд на S&P 500 — сотни крупнейших компаний США.",
+    "about.c2.title": "Без ежегодных налогов",
+    "about.c2.body":
+      "Налог на доход не платится каждый год, поэтому больше денег остаётся в работе и растёт по принципу сложного процента.",
+    "about.c3.title": "Её счёт с 18 лет",
+    "about.c3.body":
+      "Деньги остаются инвестированными до 18 лет. Затем счёт становится её личным traditional IRA: можно продолжать копить или использовать деньги по правилам IRA, например на учёбу или первое жильё.",
+    "about.c4.title": "До $5 000 в год",
+    "about.c4.body":
+      "Родные и друзья вместе могут внести до $5 000 на каждого ребёнка в год. Взнос засчитывается в тот календарный год, когда он отправлен.",
+    "about.note":
+      "<strong>Почему важен именно ваш подарок.</strong> Дети, родившиеся в 2025–2028 годах, получают стартовые $1 000 от Минфина США. Вера и Алиса родились раньше, поэтому их счета растут только за счёт подарков семьи.",
+    "about.sources": "Источники:",
+    "about.src1": "Обзор Trump Accounts",
+    "about.src2": "Как сделать взнос",
+
+    "calc.eyebrow": "Калькулятор роста",
+    "calc.title": "Во что может вырасти один подарок.",
+    "calc.lead":
+      "Выберите сумму и посмотрите, как она может вырасти для каждой из девочек с учётом её возраста. Основную работу делает время.",
+    "calc.amount": "Ваш подарок",
+    "calc.freq": "Как часто",
+    "calc.once": "Один раз",
+    "calc.yearly": "Каждый год",
+    "calc.yearlyHint": "Ежегодные взносы возможны до конца года, в котором ей исполнится 17.",
+    "calc.rate": "Доходность в год",
+    "calc.rateHint": "Условное допущение, а не обещание.",
+    "calc.real": "В сегодняшних деньгах",
+    "calc.realHint": "С поправкой на инфляцию около {rate}% в год.",
+    "calc.given": "Вы дарите",
+    "calc.givenShort": "Взнос",
+    "calc.at": "В {age}",
+    "calc.age": "{age} лет",
+    "calc.now": "Сейчас {age} лет",
+    "calc.payments": "взносов: {n}",
+    "calc.payment1": "один взнос",
+    "calc.summary":
+      "{freq} {amount} может вырасти примерно до <strong>{v18}</strong> к 18-летию {nameGen} и до <strong>{v60}</strong>, если она оставит деньги инвестированными до 60 лет.",
+    "calc.freqOnce": "Подарок",
+    "calc.freqYearly": "Ежегодный подарок",
+    "calc.chartLabel": "График условной стоимости счёта каждой девочки в 18, 30 и 60 лет",
+    "calc.legendGiven": "Всего подарено",
+    "calc.legendValue": "Условная стоимость",
+    "calc.disclaimer":
+      "<strong>Это лишь иллюстрация, а не обещание.</strong> Расчёт предполагает одинаковую доходность каждый год, чего на реальном рынке не бывает: стоимость колеблется и может снижаться. Широкие индексы акций США исторически приносили в среднем около 10% в год до учёта инфляции (около 7% после) на длинных отрезках, но прошлые результаты не гарантируют будущих. Не учтены комиссии фонда (не более 0,1% в год) и налоги при снятии. После 18 лет предполагается, что деньги просто остаются инвестированными.",
+
+    "kids.eyebrow": "Кого поздравляем",
+    "kids.title": "Знакомьтесь: Вера и Алиса.",
+    "kids.lead": "У каждой девочки свой счёт. Нажмите «Подарить» или отсканируйте QR-код камерой телефона.",
+    "kids.birthday": "День рождения",
+    "kids.next": "До дня рождения: {n} дн.",
+    "kids.next1": "День рождения завтра!",
+    "kids.today": "Сегодня день рождения!",
+    "kids.contribute": "Подарить {name}",
+    "kids.soon": "Ссылка для взноса скоро появится",
+    "kids.soonNote": "Мы её настраиваем. Загляните чуть позже.",
+    "kids.qr": "Сканируйте, чтобы подарить",
+    "kids.qrSoon": "QR-код скоро появится",
+    "kids.official": "Откроется официальная страница Trump Accounts",
+    "kids.abroad": "Живёте не в США?",
+    "kids.photoAlt": "Фото: {name}",
+    "kids.photoSoon": "Фото скоро появится",
+
+    "give.eyebrow": "Как подарить",
+    "give.title": "Два простых способа.",
+    "give.us.tag": "Из США",
+    "give.us.title": "По официальной ссылке",
+    "give.us.s1": "Нажмите <strong>«Подарить»</strong> на карточке Веры или Алисы или отсканируйте QR-код.",
+    "give.us.s2": "Оплатите с американского <strong>банковского счёта</strong> или <strong>дебетовой карты</strong> на официальной странице Trump Accounts.",
+    "give.us.s3": "Введите сумму. Страница покажет, сколько ещё можно внести в этом году.",
+    "give.us.note": "Платёж с дебетовой карты обычно приходит за несколько минут, банковский перевод — до 5 рабочих дней.",
+    "give.ab.tag": "Европа и другие страны",
+    "give.ab.title": "Через Мишу",
+    "give.ab.lead":
+      "Официальная страница принимает только американские банковские счета и дебетовые карты. Из-за границы отправьте подарок Мише, и он внесёт его на счёт девочки.",
+    "give.ab.s1": "Отправьте через <strong>Wise</strong> или <strong>PayPal</strong> (в долларах или в своей валюте).",
+    "give.ab.s2": "В комментарии укажите имя девочки и повод, например <em>«Вера, день рождения»</em>.",
+    "give.ab.s3": "Миша внесёт деньги на её Trump Account и сообщит вам.",
+    "give.ab.soon": "реквизиты скоро появятся",
+    "give.ab.copy": "Копировать",
+    "give.ab.copied": "Скопировано",
+    "give.record.title": "Каждый подарок записан.",
+    "give.record.body":
+      "Мы ведём простой список: кто, когда и сколько подарил. Когда-нибудь Вера и Алиса точно узнают, кто помог их сбережениям вырасти.",
+    "give.contact": "Вопросы? Напишите Мише",
+
+    "faq.eyebrow": "Вопросы и ответы",
+    "faq.title": "Хорошие вопросы.",
+    "faq.q1": "Это надёжно?",
+    "faq.a1":
+      "Да. Trump Accounts — программа Министерства финансов США. Деньги хранятся на отдельном трастовом счёте у зарегистрированного доверительного управляющего, сделки проходят через DTCC, а инвестиции защищены SIPC на сумму до $500 000. Как и любые инвестиции, стоимость может снижаться вместе с рынком, и SIPC не защищает от рыночных потерь. Пользуйтесь только официальной ссылкой или QR-кодом с этой страницы и никому не сообщайте пароли и одноразовые коды.",
+    "faq.q2": "Куда идут деньги?",
+    "faq.a2":
+      "Прямо на собственный счёт Trump Account девочки, который юридически принадлежит ей. Деньги автоматически инвестируются в индексный фонд на S&P 500. Плата за ведение счёта и за взносы не взимается, а комиссия самого фонда — не более 0,1% в год. До 18 лет счётом управляют мама и папа, и снять деньги до этого времени никто не может.",
+    "faq.q3": "Сколько можно подарить? Какие ограничения?",
+    "faq.a3":
+      "Сколько захотите. Все вместе (родные, друзья и работодатели) могут внести <strong>до $5 000 на ребёнка в год</strong>, а официальная страница покажет, сколько ещё доступно. Взнос засчитывается в тот календарный год, когда он отправлен, так что декабрьский подарок идёт в текущий год. Взносы принимаются до 31 декабря года, в котором ей исполнится 17, поэтому времени меньше, чем кажется.",
+    "faq.q4": "Когда девочки смогут воспользоваться деньгами?",
+    "faq.a4":
+      "Не раньше 18 лет. Затем счёт становится её личным traditional IRA: можно продолжать инвестировать или снимать деньги. Доход при снятии облагается подоходным налогом, а до 59½ лет может взиматься дополнительный налог 10% — за исключением, например, расходов на учёбу или покупку первого жилья (до $10 000).",
+    "faq.q5": "Можно ли получить налоговый вычет за подарок?",
+    "faq.a5":
+      "Нет. Взносы частных лиц делаются из уже облагаемых налогом денег, без вычета. Ваш подарок становится частью её «базы», которую позже можно снять без налога. Это не налоговая консультация; за деталями обратитесь к специалисту.",
+    "faq.q6": "Я живу не в США. Могу ли я подарить?",
+    "faq.a6":
+      "Конечно. Отправьте подарок Мише через Wise или PayPal, указав имя девочки в комментарии, и он внесёт его на её счёт. Подробнее — в разделе <a href=\"#give\">«Как подарить»</a>.",
+    "faq.q7": "Это официальный сайт Trump Accounts?",
+    "faq.a7":
+      "Нет. Это личная страница семьи Веры и Алисы. Мы не связаны с Министерством финансов США, IRS или программой Trump Accounts. Официальная информация — на <a href=\"https://trumpaccount.com/us/en/support/articles/overview/\" target=\"_blank\" rel=\"noopener\">trumpaccount.com</a> (на английском).",
+    "faq.q8": "А можно всё-таки принести что-нибудь небольшое?",
+    "faq.a8":
+      "Конечно! Открытка, рисунок или маленький сюрприз всегда в радость. Просто нам хочется, чтобы главный подарок продолжал расти.",
+
+    "footer.made": "С любовью, Миша и Оля · Остин, Техас",
+    "footer.legal":
+      "Личная семейная страница. Не связана с Министерством финансов США, IRS, программой Trump Accounts или её партнёрами и не одобрена ими. Расчёты роста — гипотетические примеры, а не финансовая, инвестиционная или налоговая консультация.",
+    "footer.top": "Наверх",
+  },
+};
