@@ -7,10 +7,16 @@
   var lang = DICT[root.lang] ? root.lang : "en";
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var DAY = 86400000;
+  // Child pages (/vera/, /alisa/) set data-kid and data-root="../" on <html>.
+  var ROOT = root.dataset.root || "";
+  var FOCUS = CFG.kids.filter(function (k) { return k.id === root.dataset.kid; })[0] || null;
+  var KIDS = FOCUS ? [FOCUS] : CFG.kids;
+  var SIBLING = FOCUS ? CFG.kids.filter(function (k) { return k !== FOCUS; })[0] : null;
 
   /* ───────────── helpers ───────────── */
   function t(key, vars) {
     var s = (DICT[lang] && DICT[lang][key]) || DICT.en[key] || key;
+    if (FOCUS) vars = Object.assign(focusVars(), vars || {});
     if (vars) s = s.replace(/\{(\w+)\}/g, function (m, k) { return vars[k] != null ? vars[k] : m; });
     return s;
   }
@@ -30,6 +36,16 @@
   function num(v) { return new Intl.NumberFormat(locale(), { maximumFractionDigits: 1 }).format(v); }
   function kidName(k) { return k.name[lang] || k.name.en; }
   function kidNameGen(k) { return (lang === "ru" && k.name.ruGenitive) || kidName(k); }
+  function kidNameDat(k) { return (lang === "ru" && k.name.ruDative) || kidName(k); }
+  function kidNameAcc(k) { return (lang === "ru" && k.name.ruAccusative) || kidName(k); }
+  function nameVars(k) { return { name: kidName(k), nameGen: kidNameGen(k), nameDat: kidNameDat(k), nameAcc: kidNameAcc(k) }; }
+  function focusVars() {
+    var v = nameVars(FOCUS);
+    v.date = monthDay(FOCUS);
+    if (SIBLING) { v.sibling = kidName(SIBLING); v.siblingGen = kidNameGen(SIBLING); v.siblingAcc = kidNameAcc(SIBLING); }
+    return v;
+  }
+  function asset(path) { return !path || /^(https?:|data:|\/)/.test(path) ? path : ROOT + path; }
   function monthDay(k) {
     return new Intl.DateTimeFormat(locale(), { month: "long", day: "numeric", timeZone: "UTC" })
       .format(new Date(Date.UTC(2000, k.birthday.month - 1, k.birthday.day)));
@@ -53,12 +69,12 @@
     var pos = p.focus ? ' style="object-position:' + esc(p.focus) + '"' : "";
     if (p.jpg || p.webp) {
       return '<picture>' +
-        (p.webp ? '<source srcset="' + esc(p.webp) + '" type="image/webp">' : "") +
-        '<img class="' + (cls || "") + '" src="' + esc(p.jpg || p.webp) + '" alt="' + alt + '" width="960" height="1200" loading="lazy" decoding="async"' + pos + ">" +
+        (p.webp ? '<source srcset="' + esc(asset(p.webp)) + '" type="image/webp">' : "") +
+        '<img class="' + (cls || "") + '" src="' + esc(asset(p.jpg || p.webp)) + '" alt="' + alt + '" width="960" height="1200" loading="lazy" decoding="async"' + pos + ">" +
         "</picture>";
     }
     if (p.placeholder) {
-      return '<img class="' + (cls || "") + '" src="' + esc(p.placeholder) + '" alt="' + alt + '" loading="lazy">';
+      return '<img class="' + (cls || "") + '" src="' + esc(asset(p.placeholder)) + '" alt="' + alt + '" loading="lazy">';
     }
     return '<div class="ph" role="img" aria-label="' + esc(t("kids.photoSoon")) + '"><div><div class="ph__initial">' +
       esc(kidName(k).charAt(0)) + '</div><div class="ph__text">' + esc(t("kids.photoSoon")) + "</div></div></div>";
@@ -90,11 +106,12 @@
   /* ───────────── i18n application ───────────── */
   function applyStatic() {
     root.lang = lang;
-    document.title = t("meta.title");
+    document.title = t(FOCUS ? "kid.meta.title" : "meta.title");
     var md = document.querySelector('meta[name="description"]');
-    if (md) md.setAttribute("content", t("meta.description"));
-    document.querySelectorAll("[data-i18n]").forEach(function (el) { el.textContent = t(el.dataset.i18n); });
-    document.querySelectorAll("[data-i18n-html]").forEach(function (el) { el.innerHTML = t(el.dataset.i18nHtml); });
+    if (md) md.setAttribute("content", t(FOCUS ? "kid.meta.description" : "meta.description"));
+    function key(el, base) { return (FOCUS && el.dataset.i18nKid) || base; }
+    document.querySelectorAll("[data-i18n]").forEach(function (el) { el.textContent = t(key(el, el.dataset.i18n)); });
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) { el.innerHTML = t(key(el, el.dataset.i18nHtml)); });
     document.querySelectorAll("[data-i18n-aria]").forEach(function (el) { el.setAttribute("aria-label", t(el.dataset.i18nAria)); });
     document.querySelectorAll(".lang__btn").forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
@@ -116,21 +133,29 @@
     var el = document.getElementById("hero-art");
     var now = new Date();
     var a = CFG.kids[0], b = CFG.kids[1] || CFG.kids[0];
-    var young = kidsByAge[0];
+    var young = FOCUS || kidsByAge[0];
     var p = project(young, { amount: 100, freq: "once", rate: CFG.calculator.defaultReturn, real: false }, now);
+    var cta = document.getElementById("hero-cta");
+    if (FOCUS && FOCUS.contributeUrl) { cta.href = FOCUS.contributeUrl; cta.target = "_blank"; cta.rel = "noopener"; }
     function card(k, cls) {
       return '<figure class="polaroid ' + cls + '"><div class="polaroid__img">' + photoHTML(k) + "</div>" +
         '<figcaption class="polaroid__cap"><span class="polaroid__name">' + esc(kidName(k)) + "</span>" +
         '<span class="polaroid__date">' + esc(monthDay(k)) + "</span></figcaption></figure>";
     }
-    el.innerHTML = card(a, "polaroid--a") + card(b, "polaroid--b") +
+    el.classList.toggle("hero__art--single", !!FOCUS);
+    var d = FOCUS ? daysToBirthday(FOCUS, now) : 0;
+    var cards = FOCUS
+      ? card(FOCUS, "polaroid--solo") + '<div class="bday-chip"><svg class="bday-chip__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="4" rx="1"/><path d="M5 13v7h14v-7M12 9v11M12 9c-1.5-3-5-4-5-1.5S10 9 12 9zm0 0c1.5-3 5-4 5-1.5S14 9 12 9z"/></svg>' +
+        esc(d === 0 ? t("kids.today") : d === 1 ? t("kids.next1") : t("kid.hero.countdown", { n: d })) + "</div>"
+      : card(a, "polaroid--a") + card(b, "polaroid--b");
+    el.innerHTML = cards +
       '<div class="growth-chip">' +
       '<svg class="growth-chip__spark" viewBox="0 0 64 40"><defs><linearGradient id="sg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#d4b06a" stop-opacity=".45"/><stop offset="1" stop-color="#d4b06a" stop-opacity="0"/></linearGradient></defs>' +
       '<path d="M2 36 C 20 34, 34 28, 44 18 S 58 6, 62 3 L62 40 L2 40 Z" fill="url(#sg)"/>' +
       '<path d="M2 36 C 20 34, 34 28, 44 18 S 58 6, 62 3" fill="none" stroke="#b88a3e" stroke-width="2.4" stroke-linecap="round"/>' +
       '<circle cx="62" cy="3" r="2.6" fill="#1f2a44"/></svg>' +
       "<div><div class=\"growth-chip__today\">" + esc(t("hero.chipToday", { amount: money(100) })) + "</div>" +
-      '<div class="growth-chip__later">' + esc(t("hero.chipLater", { amount: money(p.v30), name: kidName(young), nameGen: kidNameGen(young) })) + "</div>" +
+      '<div class="growth-chip__later">' + esc(t("hero.chipLater", Object.assign(nameVars(young), { amount: money(p.v30) }))) + "</div>" +
       '<div class="growth-chip__note">' + esc(t("hero.chipNote", { rate: num(CFG.calculator.defaultReturn) })) + "</div></div></div>";
   }
 
@@ -175,7 +200,7 @@
     var gGap = compact ? 18 : 40;
     var gW = (plotW - gGap * (groups - 1)) / groups;
     var bars = 4, bGap = compact ? 8 : 12;
-    var bW = Math.min(64, (gW - bGap * (bars - 1)) / bars);
+    var bW = Math.min(groups === 1 ? 96 : 64, (gW - bGap * (bars - 1)) / bars);
     var inner = bW * bars + bGap * (bars - 1);
     var y = function (v) { return padT + plotH - (Math.max(0, v) / yMax) * plotH; };
     var out = [];
@@ -251,7 +276,7 @@
       c.setAttribute("aria-pressed", String(parseFloat(c.dataset.amount) === s.amount));
     });
 
-    var results = CFG.kids.map(function (k) {
+    var results = KIDS.map(function (k) {
       var p = project(k, s, now);
       p.kid = k; p.name = kidName(k);
       return p;
@@ -259,7 +284,7 @@
     var yMax = niceMax(Math.max.apply(null, results.map(function (r) { return r.v60; })) * 1.04);
     var target = results.map(function (r) { return { name: r.name, given: r.given, v18: r.v18, v30: r.v30, v60: r.v60, yMax: yMax }; });
 
-    var young = results.filter(function (r) { return r.kid === kidsByAge[0]; })[0];
+    var young = results.filter(function (r) { return r.kid === (FOCUS || kidsByAge[0]); })[0];
     document.getElementById("calc-summary").innerHTML = t("calc.summary", {
       amount: esc(money(s.amount)),
       freq: esc(t(s.freq === "yearly" ? "calc.freqYearly" : "calc.freqOnce")),
@@ -274,7 +299,9 @@
         ", " + t("calc.at", { age: 30 }) + " " + money(r.v30) + ", " + t("calc.at", { age: 60 }) + " " + money(r.v60);
     }).join("; "));
 
-    document.getElementById("kid-stats").innerHTML = results.map(function (r) {
+    var stats = document.getElementById("kid-stats");
+    stats.classList.toggle("kid-stats--single", results.length === 1);
+    stats.innerHTML = results.map(function (r) {
       var gifts = r.n === 1 ? t("calc.payment1") : t("calc.payments", { n: r.n });
       return '<div class="kid-stat"><div class="kid-stat__avatar">' + photoHTML(r.kid) + "</div>" +
         '<div class="kid-stat__name">' + esc(r.name) + " · " + esc(t("calc.given").toLowerCase()) + " " + esc(money(r.given)) + "</div>" +
@@ -301,19 +328,21 @@
   /* ───────────── kids ───────────── */
   function renderKids() {
     var now = new Date();
-    document.getElementById("kids-list").innerHTML = CFG.kids.map(function (k) {
+    var list = document.getElementById("kids-list");
+    list.classList.toggle("kids--single", !!FOCUS);
+    list.innerHTML = KIDS.map(function (k) {
       var name = kidName(k);
       var d = daysToBirthday(k, now);
       var count = d === 0 ? t("kids.today") : d === 1 ? t("kids.next1") : t("kids.next", { n: d });
       var btn = k.contributeUrl
         ? '<a class="btn btn--primary btn--lg" href="' + esc(k.contributeUrl) + '" target="_blank" rel="noopener" aria-describedby="official-' + k.id + '">' +
-          esc(t("kids.contribute", { name: name })) +
+          esc(t("kids.contribute", nameVars(k))) +
           ' <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 13L13 7M8 7h5v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>' +
           '<p class="kid__note" id="official-' + k.id + '">' + esc(t("kids.official")) + "</p>"
         : '<span class="btn btn--lg" role="link" aria-disabled="true">' + esc(t("kids.soon")) + "</span>" +
           '<p class="kid__note">' + esc(t("kids.soonNote")) + "</p>";
       var qr = k.qrImage
-        ? '<div class="qr__box"><img src="' + esc(k.qrImage) + '" alt="QR: ' + esc(name) + '" width="76" height="76" loading="lazy"></div>' +
+        ? '<div class="qr__box"><img src="' + esc(asset(k.qrImage)) + '" alt="QR: ' + esc(name) + '" width="76" height="76" loading="lazy"></div>' +
           '<div class="qr__text"><strong>' + esc(t("kids.qr")) + "</strong>" + esc(t("kids.official")) + "</div>"
         : '<div class="qr__box qr__box--empty"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h3v-3"/></svg></div>' +
           '<div class="qr__text"><strong>' + esc(t("kids.qr")) + "</strong>" + esc(t("kids.qrSoon")) + "</div>";
@@ -323,10 +352,17 @@
         '<div class="kid__bday"><span class="kid__bday-label">' + esc(t("kids.birthday")) + '</span><span class="kid__bday-date">' + esc(monthDay(k)) + "</span></div></div></div>" +
         '<div class="kid__body">' +
         '<span class="kid__countdown">' + esc(count) + "</span>" +
+        (FOCUS ? '<h3 class="h3 kid__title">' + esc(t("kid.card.title")) + '</h3><p class="kid__text">' + esc(t("kid.card.note")) + "</p>" : "") +
         '<div class="kid__actions">' + btn + '<div class="qr">' + qr + "</div>" +
-        '<a class="kid__abroad" href="#give">' + esc(t("kids.abroad")) + "</a></div>" +
+        '<div class="kid__links">' +
+        (FOCUS ? "" : '<a href="' + esc(ROOT + k.id + "/") + '">' + esc(t("kids.page", nameVars(k))) + " →</a>") +
+        '<a href="#give">' + esc(t("kids.abroad")) + "</a></div></div>" +
         "</div></article>";
-    }).join("");
+    }).join("") + (SIBLING
+      ? '<a class="sibling reveal is-in" href="' + esc(ROOT + SIBLING.id + "/") + '">' +
+        '<span class="sibling__photo">' + photoHTML(SIBLING) + "</span>" +
+        '<span class="sibling__text"><span>' + esc(t("kid.sibling")) + "</span><strong>" + esc(t("kid.siblingLink")) + " →</strong></span></a>"
+      : "");
   }
 
   /* ───────────── payment methods ───────────── */

@@ -23,11 +23,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # No build step: publish only the files the site needs (not tools/ or the README).
+      # Publish only the files the site needs (not tools/ or the README), and regenerate
+      # each child's page (/vera/, /alisa/) from index.html so they never go stale.
       - name: Collect site files
         run: |
           mkdir _site
           cp -r index.html assets _site/
+          python3 tools/build_kid_pages.py --out _site
           touch _site/.nojekyll
 
       - uses: actions/configure-pages@v5

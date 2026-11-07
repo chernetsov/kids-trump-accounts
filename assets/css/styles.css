@@ -353,6 +353,7 @@ html[lang="ru"] .display { font-size: clamp(50px, 7vw, 92px); }
 .sw--value { background: linear-gradient(180deg, var(--gold-2), var(--gold)); }
 
 .kid-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 22px; }
+.kid-stats--single { grid-template-columns: minmax(0, 420px); }
 .kid-stat {
   display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; align-items: center;
   padding: 14px 16px; border-radius: 18px; background: var(--bg); border: 1px solid var(--line);
@@ -410,7 +411,45 @@ html[lang="ru"] .display { font-size: clamp(50px, 7vw, 92px); }
 .qr__box--empty svg { width: 30px; height: 30px; color: var(--muted); }
 .qr__text { font-size: 13.5px; line-height: 1.4; color: var(--ink-2); }
 .qr__text strong { display: block; color: var(--ink); font-size: 14.5px; }
-.kid__abroad { font-size: 14px; color: var(--ink-2); text-align: center; text-underline-offset: 3px; }
+.kid__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 22px; font-size: 14px; }
+.kid__links a { color: var(--ink-2); text-underline-offset: 3px; }
+.kid__links a:hover { color: var(--ink); }
+
+/* Single-child page (/vera/, /alisa/) */
+.kids--single { grid-template-columns: minmax(0, 980px); justify-content: center; }
+.kids--single .kid { flex-direction: row; }
+.kids--single .kid__photo { flex: 0 0 50%; aspect-ratio: 4 / 5; }
+.kids--single .kid__body { padding: 36px 36px 32px; justify-content: center; }
+.kids--single .kid__actions { margin-top: 10px; }
+.kid__title { margin: 4px 0 0; font-size: clamp(32px, 3.4vw, 42px); }
+.kid__text { margin: 0; color: var(--ink-2); font-size: 16px; line-height: 1.6; }
+.sibling {
+  justify-self: center; display: inline-flex; align-items: center; gap: 14px; margin-top: 8px;
+  padding: 10px 24px 10px 10px; border-radius: 999px; text-decoration: none;
+  background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.sibling:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.sibling__photo { position: relative; width: 52px; height: 52px; border-radius: 50%; overflow: hidden; flex: none; background: var(--bg-tint); }
+.sibling__photo img, .sibling__photo .ph { width: 100%; height: 100%; object-fit: cover; }
+.sibling__photo .ph__initial { font-size: 26px; }
+.sibling__photo .ph__text { display: none; }
+.sibling__text { display: flex; flex-direction: column; font-size: 13.5px; color: var(--muted); line-height: 1.35; }
+.sibling__text strong { font-size: 16px; color: var(--ink); font-weight: 650; }
+
+.hero__art--single .polaroid--solo { width: 70%; left: 15%; top: 4%; transform: rotate(-3deg); }
+.hero__art--single:hover .polaroid--solo { transform: rotate(-1.5deg) translateY(-4px); }
+.hero__art--single .polaroid__name { font-size: 40px; }
+.hero__art--single .growth-chip { right: -4%; top: 60%; }
+html[data-kid] .display { font-size: clamp(50px, 6.4vw, 88px); }
+html[data-kid][lang="ru"] .display { font-size: clamp(46px, 5.4vw, 76px); }
+.bday-chip {
+  position: absolute; z-index: 3; left: 0; top: 14%;
+  display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px 12px 14px; border-radius: 999px;
+  background: var(--navy); color: #fff; font-weight: 600; font-size: 15px; box-shadow: var(--shadow);
+  animation: float 7s ease-in-out infinite 1s;
+}
+.bday-chip__icon { width: 22px; height: 22px; fill: none; stroke: #e7cf9a; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 
 .ph {
   display: grid; place-items: center; text-align: center;
@@ -522,6 +561,8 @@ html[lang="ru"] .display { font-size: clamp(50px, 7vw, 92px); }
   .calc { grid-template-columns: 1fr; }
   .calc__controls { border-right: 0; border-bottom: 1px solid var(--line); }
   .ways { grid-template-columns: 1fr; }
+  .kids--single .kid { flex-direction: column; }
+  .kids--single .kid__photo { flex: none; aspect-ratio: 4 / 3; }
   .footer__inner { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
@@ -557,7 +598,16 @@ html[lang="ru"] .display { font-size: clamp(50px, 7vw, 92px); }
   .kid__photo { aspect-ratio: 1 / 1.05; }
   .kid__overlay { padding: 0 20px 18px; }
   .kid__bday-date { font-size: 17px; }
-  .kid__body { padding: 20px 18px 20px; }
+  .kid__body, .kids--single .kid__body { padding: 20px 18px 20px; }
+  .kids--single .kid__photo { aspect-ratio: 1 / 1.05; }
+  .hero__art--single .polaroid--solo { width: 76%; left: 12%; }
+  .hero__art--single .polaroid__name { font-size: 30px; }
+  .bday-chip { top: 8%; padding: 9px 14px 9px 11px; font-size: 13.5px; }
+  .bday-chip__icon { width: 18px; height: 18px; }
+  .hero__art--single .growth-chip { right: 0; top: 62%; }
+  html[data-kid] .display { font-size: clamp(46px, 12.4vw, 64px); }
+  html[data-kid][lang="ru"] .display { font-size: clamp(40px, 10.6vw, 56px); }
+  .sibling { padding-right: 18px; }
   .way { padding: 26px 22px; border-radius: 28px; }
   .pay__item { flex-wrap: wrap; }
   .pay__btns { width: 100%; }

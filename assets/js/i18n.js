@@ -149,6 +149,27 @@ window.I18N = {
     "footer.legal":
       "A personal family page. Not affiliated with or endorsed by the U.S. Treasury, the IRS, the Trump Accounts program or its partners. Growth figures are hypothetical illustrations, not financial, investment or tax advice.",
     "footer.top": "Back to top",
+
+    "kid.meta.title": "{name} · A gift that grows",
+    "kid.meta.description": "For {name}’s birthday and holidays: a gift that grows, a contribution to her Trump Account.",
+    "kid.nav.kids": "Give",
+    "kid.hero.eyebrow": "{name}’s birthday · {date}",
+    "kid.hero.title": "Give {name} a gift that <em>grows</em>.",
+    "kid.hero.lead":
+      "Instead of another toy, consider a contribution to {name}’s Trump Account. It stays invested for years, so even a small gift today can become something meaningful by the time she’s grown.",
+    "kid.hero.cta1": "Give to {name}",
+    "kid.hero.countdown": "Birthday in {n} days",
+    "kid.calc.lead": "Pick an amount and see how it might grow for {name}, based on her age today. Time does most of the work.",
+    "kid.kids.eyebrow": "Give to {name}",
+    "kid.kids.title": "Celebrate {name}.",
+    "kid.kids.lead": "Tap Contribute, or scan the QR code with your phone camera.",
+    "kid.give.us.s1": "Tap <strong>Contribute</strong> on {name}’s card, or scan her QR code.",
+    "kid.give.ab.s2": "In the note, write <em>“{name}”</em> and the occasion, e.g. <em>“{name}, birthday”</em>.",
+    "kid.card.title": "A gift for {name}’s future",
+    "kid.card.note": "Every gift goes straight into {name}’s own account and stays invested until she turns 18.",
+    "kid.sibling": "Also celebrating {sibling}?",
+    "kid.siblingLink": "Visit {sibling}’s page",
+    "kids.page": "{name}’s own page",
   },
 
   ru: {
@@ -236,7 +257,7 @@ window.I18N = {
     "kids.next": "До дня рождения: {n} дн.",
     "kids.next1": "День рождения завтра!",
     "kids.today": "Сегодня день рождения!",
-    "kids.contribute": "Подарить {name}",
+    "kids.contribute": "Подарить {nameDat}",
     "kids.soon": "Ссылка для взноса скоро появится",
     "kids.soonNote": "Мы её настраиваем. Загляните чуть позже.",
     "kids.qr": "Сканируйте, чтобы подарить",
@@ -300,5 +321,26 @@ window.I18N = {
     "footer.legal":
       "Личная семейная страница. Не связана с Министерством финансов США, IRS, программой Trump Accounts или её партнёрами и не одобрена ими. Расчёты роста — гипотетические примеры, а не финансовая, инвестиционная или налоговая консультация.",
     "footer.top": "Наверх",
+
+    "kid.meta.title": "{name} · Подарок, который растёт",
+    "kid.meta.description": "На день рождения и праздники {nameGen}: подарок, который растёт, взнос на её Trump Account.",
+    "kid.nav.kids": "Подарить",
+    "kid.hero.eyebrow": "День рождения {nameGen} · {date}",
+    "kid.hero.title": "Подарите {nameDat} подарок, который <em>растёт</em>.",
+    "kid.hero.lead":
+      "Вместо очередной игрушки подарите взнос на счёт Trump Account {nameGen}. Деньги будут инвестированы на годы вперёд, и даже небольшой подарок сегодня может превратиться в заметную сумму к тому времени, когда она вырастет.",
+    "kid.hero.cta1": "Подарить {nameDat}",
+    "kid.hero.countdown": "До дня рождения: {n} дн.",
+    "kid.calc.lead": "Выберите сумму и посмотрите, как она может вырасти для {nameGen} с учётом её возраста. Основную работу делает время.",
+    "kid.kids.eyebrow": "Подарок для {nameGen}",
+    "kid.kids.title": "Порадуйте {nameAcc}.",
+    "kid.kids.lead": "Нажмите «Подарить» или отсканируйте QR-код камерой телефона.",
+    "kid.give.us.s1": "Нажмите <strong>«Подарить»</strong> на карточке {nameGen} или отсканируйте QR-код.",
+    "kid.give.ab.s2": "В комментарии укажите имя и повод, например <em>«{name}, день рождения»</em>.",
+    "kid.card.title": "Подарок в будущее {nameGen}",
+    "kid.card.note": "Каждый подарок поступает прямо на собственный счёт {nameGen} и остаётся инвестированным до её 18 лет.",
+    "kid.sibling": "Поздравляете и {siblingAcc}?",
+    "kid.siblingLink": "Страница {siblingGen}",
+    "kids.page": "Отдельная страница {nameGen}",
   },
 };

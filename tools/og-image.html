@@ -31,5 +31,22 @@
   </div>
   <div class="card a"><img src="../assets/photos/vera.jpg" alt=""><div>Vera</div></div>
   <div class="card b"><img src="../assets/photos/alisa.jpg" alt=""><div>Alisa</div></div>
+  <script>
+    // og-image.html?kid=vera renders the preview for a child's own page (assets/img/og-vera.jpg).
+    var KIDS = { vera: ["Vera", "May 2"], alisa: ["Alisa", "August 28"] };
+    var id = new URLSearchParams(location.search).get("kid");
+    if (KIDS[id]) {
+      var name = KIDS[id][0];
+      document.querySelector(".eyebrow").textContent = name + "’s birthday · " + KIDS[id][1];
+      document.querySelector("h1").innerHTML = "Give " + name + "<br>a gift that <em>grows</em>.";
+      document.querySelector("p").textContent = "Instead of toys, a contribution to her Trump Account, invested for her future.";
+      document.querySelectorAll(".card").forEach(function (c) { c.remove(); });
+      var card = document.createElement("div");
+      card.className = "card solo";
+      card.innerHTML = '<img src="../assets/photos/' + id + '.jpg" alt=""><div>' + name + "</div>";
+      document.body.appendChild(card);
+    }
+  </script>
+  <style>.solo { width: 330px; left: 790px; top: 34px; transform: rotate(-3deg); }</style>
 </body>
 </html>
