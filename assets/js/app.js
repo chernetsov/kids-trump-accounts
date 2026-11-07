@@ -342,7 +342,8 @@
         : '<span class="btn btn--lg" role="link" aria-disabled="true">' + esc(t("kids.soon")) + "</span>" +
           '<p class="kid__note">' + esc(t("kids.soonNote")) + "</p>";
       var qr = k.qrImage
-        ? '<div class="qr__box"><img src="' + esc(asset(k.qrImage)) + '" alt="QR: ' + esc(name) + '" width="76" height="76" loading="lazy"></div>' +
+        ? '<a class="qr__box qr__box--img" href="' + esc(asset(k.qrImage.replace(/\.svg$/, ".png"))) + '" target="_blank" rel="noopener">' +
+          '<img src="' + esc(asset(k.qrImage)) + '" alt="' + esc(t("kids.qrAlt", nameVars(k))) + '" width="159" height="159"></a>' +
           '<div class="qr__text"><strong>' + esc(t("kids.qr")) + "</strong>" + esc(t("kids.official")) + "</div>"
         : '<div class="qr__box qr__box--empty"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h3v-3"/></svg></div>' +
           '<div class="qr__text"><strong>' + esc(t("kids.qr")) + "</strong>" + esc(t("kids.qrSoon")) + "</div>";

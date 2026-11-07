@@ -16,12 +16,11 @@ window.SITE_CONFIG = {
       // The site shows month and day only, never the year.
       birthday: { year: 2014, month: 5, day: 2 },
 
-      // PLACEHOLDER: Vera's official contribution link. In the Trump Accounts app:
-      // open Vera's account → QR icon (top left) → Share link. Paste the URL here.
-      contributeUrl: "",
+      // Official contribution link (Trump Accounts app → Vera's account → QR icon → Share link).
+      contributeUrl: "https://contribute.trumpaccount.com/verac-389890ba/?secret=8YaZnHrYM3NjLmGAmx6H1wr",
 
-      // PLACEHOLDER: optional QR code image saved from the app, e.g. "assets/qr/vera-qr.png".
-      qrImage: "",
+      // Made with: python3 tools/make_qr.py vera "<contributeUrl>" (re-run if the link changes).
+      qrImage: "assets/qr/vera-qr.svg",
 
       photo: {
         webp: "assets/photos/vera.webp",
@@ -35,11 +34,11 @@ window.SITE_CONFIG = {
       name: { en: "Alisa", ru: "Алиса", ruGenitive: "Алисы", ruDative: "Алисе", ruAccusative: "Алису" },
       birthday: { year: 2016, month: 8, day: 28 },
 
-      // PLACEHOLDER: Alisa's official contribution link (same steps as above).
-      contributeUrl: "",
+      // Official contribution link (Trump Accounts app → Alisa's account → QR icon → Share link).
+      contributeUrl: "https://contribute.trumpaccount.com/alisac-5af8f6c0/?secret=8YaZnHrYM3NjLmGAmx6H1wr",
 
-      // PLACEHOLDER: optional QR code image, e.g. "assets/qr/alisa-qr.png".
-      qrImage: "",
+      // Made with: python3 tools/make_qr.py alisa "<contributeUrl>" (re-run if the link changes).
+      qrImage: "assets/qr/alisa-qr.svg",
 
       photo: {
         webp: "assets/photos/alisa.webp",
