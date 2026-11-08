@@ -29,16 +29,16 @@ window.I18N = {
     "about.eyebrow": "What is a Trump Account?",
     "about.title": "An investment account made for the long run.",
     "about.lead":
-      "A Trump Account is a new kind of tax-deferred investment account for U.S. children under 18. It follows traditional IRA rules, with a few special ones for kids.",
+      "A Trump Account is a new kind of tax-deferred investment account for U.S. children under 18. It follows <a href=\"https://www.irs.gov/retirement-plans/traditional-iras\" target=\"_blank\" rel=\"noopener\">traditional IRA</a> rules, with a few special ones for kids.",
     "about.c1.title": "Invested automatically",
     "about.c1.body":
-      "Every gift is invested, usually within one business day, in a low-cost index fund that tracks the S&P 500: hundreds of the largest U.S. companies.",
+      "Every gift is invested, usually within one business day, in a low-cost index fund that tracks the <a href=\"https://www.spglobal.com/spdji/en/indices/equity/sp-500/\" target=\"_blank\" rel=\"noopener\">S&P 500</a>: hundreds of the largest U.S. companies.",
     "about.c2.title": "Grows tax-deferred",
     "about.c2.body":
       "No tax on the gains year after year, so more of the money stays invested and keeps compounding.",
     "about.c3.title": "Hers at 18",
     "about.c3.body":
-      "The money stays invested until she turns 18. Then the account becomes her traditional IRA: she can keep it growing, or use it under IRA rules, for example for college or a first home.",
+      "The money stays invested until she turns 18. Then the account becomes her <a href=\"https://www.irs.gov/retirement-plans/traditional-iras\" target=\"_blank\" rel=\"noopener\">traditional IRA</a>: she can keep it growing, or use it under IRA rules, for example for college or a first home.",
     "about.c4.title": "Up to $5,000 a year",
     "about.c4.body":
       "Family and friends together can give up to $5,000 per child per year. Each gift counts toward the calendar year it’s sent.",
@@ -132,16 +132,16 @@ window.I18N = {
     "faq.title": "Good questions.",
     "faq.q1": "Is it safe?",
     "faq.a1":
-      "Yes. Trump Accounts are a U.S. Treasury program. The money is held in a dedicated trust account with a registered trustee, trades clear through the DTCC, and investments are protected by SIPC up to $500,000. Like any investment, the value can go down with the market, and SIPC doesn’t cover market losses. Always use the official link or QR code on this page, and never share passwords or one-time codes.",
+      "Yes. Trump Accounts are a <a href=\"https://home.treasury.gov/\" target=\"_blank\" rel=\"noopener\">U.S. Treasury</a> program. The money is held in a dedicated trust account with a registered trustee, trades clear through the <a href=\"https://www.dtcc.com/\" target=\"_blank\" rel=\"noopener\">DTCC</a>, and investments are protected by <a href=\"https://www.sipc.org/for-investors/what-sipc-protects\" target=\"_blank\" rel=\"noopener\">SIPC</a> up to $500,000. Like any investment, the value can go down with the market, and SIPC doesn’t cover market losses. Always use the official link or QR code on this page, and never share passwords or one-time codes.",
     "faq.q2": "Where does the money go?",
     "faq.a2":
-      "Straight into the girl’s own Trump Account, which legally belongs to her. It’s invested automatically in an S&P 500 index fund. There are no fees to hold the account or to contribute, and the fund’s own fee is capped at 0.1% a year. Mom and Dad manage it until she turns 18, and no one can take money out before then.",
+      "Straight into the girl’s own Trump Account, which legally belongs to her. It’s invested automatically in an <a href=\"https://www.spglobal.com/spdji/en/indices/equity/sp-500/\" target=\"_blank\" rel=\"noopener\">S&P 500</a> index fund. There are no fees to hold the account or to contribute, and the fund’s own fee is capped at 0.1% a year. Mom and Dad manage it until she turns 18, and no one can take money out before then.",
     "faq.q3": "How much can I give? What are the limits?",
     "faq.a3":
       "Any amount you like. Everyone together (family, friends and employers) can give up to <strong>$5,000 per child per year</strong>, and the official page shows how much is still available. A gift counts toward the calendar year it’s sent, so a December gift counts for this year. Contributions close on December 31 of the year she turns 17, so the giving window is shorter than it seems.",
     "faq.q4": "When can the girls use the money?",
     "faq.a4":
-      "Not before 18. After that the account becomes her traditional IRA: she can keep investing or make withdrawals. Earnings are taxed as income when withdrawn, and a 10% early-withdrawal tax may apply before age 59½, with exceptions such as college costs or a first home (up to $10,000).",
+      "Not before 18. After that the account becomes her <a href=\"https://www.irs.gov/retirement-plans/traditional-iras\" target=\"_blank\" rel=\"noopener\">traditional IRA</a>: she can keep investing or make withdrawals. Earnings are taxed as income when withdrawn, and a <a href=\"https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-exceptions-to-tax-on-early-distributions\" target=\"_blank\" rel=\"noopener\">10% early-withdrawal tax</a> may apply before age 59½, with exceptions such as college costs or a first home (up to $10,000).",
     "faq.q5": "Is my gift tax-deductible?",
     "faq.a5":
       "No. Gifts from individuals go in after tax, with no deduction. Your gift becomes part of her “basis,” which she can later withdraw tax-free. This isn’t tax advice; for specifics, ask a tax professional.",
@@ -150,7 +150,7 @@ window.I18N = {
       "Absolutely. Send your gift to Misha via {payMethodsText} with the girl’s name in the note, and he’ll add it to her account. See <a href=\"#give\">How to give</a>.",
     "faq.q7": "Is this an official Trump Accounts website?",
     "faq.a7":
-      "No. This is a personal page made by Vera and Alisa’s family. We aren’t affiliated with the U.S. Treasury, the IRS, or the Trump Accounts program. For official information, visit <a href=\"https://trumpaccount.com/us/en/support/articles/overview/\" target=\"_blank\" rel=\"noopener\">trumpaccount.com</a>.",
+      "No. This is a personal page made by Vera and Alisa’s family. We aren’t affiliated with the <a href=\"https://home.treasury.gov/\" target=\"_blank\" rel=\"noopener\">U.S. Treasury</a>, the <a href=\"https://www.irs.gov/\" target=\"_blank\" rel=\"noopener\">IRS</a>, or the Trump Accounts program. For official information, visit <a href=\"https://trumpaccount.com/us/en/support/articles/overview/\" target=\"_blank\" rel=\"noopener\">trumpaccount.com</a>.",
     "faq.q8": "Can I still bring a little something?",
     "faq.a8":
       "Of course! A card, a drawing or a small surprise is always welcome. We’d just love the big gift to be one that keeps growing.",
@@ -159,6 +159,9 @@ window.I18N = {
     "footer.legal":
       "A personal family page. Not affiliated with or endorsed by the U.S. Treasury, the IRS, the Trump Accounts program or its partners. Growth figures are hypothetical illustrations, not financial, investment or tax advice.",
     "footer.top": "Back to top",
+    "footer.pagesLabel": "Pages",
+    "footer.family": "Family page",
+    "footer.kidPage": "{name}’s page",
 
     "kid.meta.title": "{name} · A gift that grows",
     "kid.meta.description": "For {name}’s birthday and holidays: a gift that grows, a contribution to her Trump Account.",
@@ -213,16 +216,16 @@ window.I18N = {
     "about.eyebrow": "Что такое Trump Account?",
     "about.title": "Инвестиционный счёт на долгую дистанцию.",
     "about.lead":
-      "Trump Account — новый вид инвестиционного счёта с отсрочкой налогов для детей в США до 18 лет. Он работает по правилам традиционного пенсионного счёта (traditional IRA) с особыми условиями для детей.",
+      "Trump Account — новый вид инвестиционного счёта с отсрочкой налогов для детей в США до 18 лет. Он работает по правилам традиционного пенсионного счёта (<a href=\"https://www.irs.gov/retirement-plans/traditional-iras\" target=\"_blank\" rel=\"noopener\">traditional IRA</a>) с особыми условиями для детей.",
     "about.c1.title": "Инвестируется автоматически",
     "about.c1.body":
-      "Каждый взнос обычно в течение одного рабочего дня вкладывается в недорогой индексный фонд на S&P 500 — сотни крупнейших компаний США.",
+      "Каждый взнос обычно в течение одного рабочего дня вкладывается в недорогой индексный фонд на <a href=\"https://www.spglobal.com/spdji/en/indices/equity/sp-500/\" target=\"_blank\" rel=\"noopener\">S&P 500</a> — сотни крупнейших компаний США.",
     "about.c2.title": "Без ежегодных налогов",
     "about.c2.body":
       "Налог на доход не платится каждый год, поэтому больше денег остаётся в работе и растёт по принципу сложного процента.",
     "about.c3.title": "Её счёт с 18 лет",
     "about.c3.body":
-      "Деньги остаются инвестированными до 18 лет. Затем счёт становится её личным traditional IRA: можно продолжать копить или использовать деньги по правилам IRA, например на учёбу или первое жильё.",
+      "Деньги остаются инвестированными до 18 лет. Затем счёт становится её личным <a href=\"https://www.irs.gov/retirement-plans/traditional-iras\" target=\"_blank\" rel=\"noopener\">traditional IRA</a>: можно продолжать копить или использовать деньги по правилам IRA, например на учёбу или первое жильё.",
     "about.c4.title": "До $5 000 в год",
     "about.c4.body":
       "Родные и друзья вместе могут внести до $5 000 на каждого ребёнка в год. Взнос засчитывается в тот календарный год, когда он отправлен.",
@@ -316,16 +319,16 @@ window.I18N = {
     "faq.title": "Хорошие вопросы.",
     "faq.q1": "Это надёжно?",
     "faq.a1":
-      "Да. Trump Accounts — программа Министерства финансов США. Деньги хранятся на отдельном трастовом счёте у зарегистрированного доверительного управляющего, сделки проходят через DTCC, а инвестиции защищены SIPC на сумму до $500 000. Как и любые инвестиции, стоимость может снижаться вместе с рынком, и SIPC не защищает от рыночных потерь. Пользуйтесь только официальной ссылкой или QR-кодом с этой страницы и никому не сообщайте пароли и одноразовые коды.",
+      "Да. Trump Accounts — программа <a href=\"https://home.treasury.gov/\" target=\"_blank\" rel=\"noopener\">Министерства финансов США</a>. Деньги хранятся на отдельном трастовом счёте у зарегистрированного доверительного управляющего, сделки проходят через <a href=\"https://www.dtcc.com/\" target=\"_blank\" rel=\"noopener\">DTCC</a>, а инвестиции защищены <a href=\"https://www.sipc.org/for-investors/what-sipc-protects\" target=\"_blank\" rel=\"noopener\">SIPC</a> на сумму до $500 000. Как и любые инвестиции, стоимость может снижаться вместе с рынком, и SIPC не защищает от рыночных потерь. Пользуйтесь только официальной ссылкой или QR-кодом с этой страницы и никому не сообщайте пароли и одноразовые коды.",
     "faq.q2": "Куда идут деньги?",
     "faq.a2":
-      "Прямо на собственный счёт Trump Account девочки, который юридически принадлежит ей. Деньги автоматически инвестируются в индексный фонд на S&P 500. Плата за ведение счёта и за взносы не взимается, а комиссия самого фонда — не более 0,1% в год. До 18 лет счётом управляют мама и папа, и снять деньги до этого времени никто не может.",
+      "Прямо на собственный счёт Trump Account девочки, который юридически принадлежит ей. Деньги автоматически инвестируются в индексный фонд на <a href=\"https://www.spglobal.com/spdji/en/indices/equity/sp-500/\" target=\"_blank\" rel=\"noopener\">S&P 500</a>. Плата за ведение счёта и за взносы не взимается, а комиссия самого фонда — не более 0,1% в год. До 18 лет счётом управляют мама и папа, и снять деньги до этого времени никто не может.",
     "faq.q3": "Сколько можно подарить? Какие ограничения?",
     "faq.a3":
       "Сколько захотите. Все вместе (родные, друзья и работодатели) могут внести <strong>до $5 000 на ребёнка в год</strong>, а официальная страница покажет, сколько ещё доступно. Взнос засчитывается в тот календарный год, когда он отправлен, так что декабрьский подарок идёт в текущий год. Взносы принимаются до 31 декабря года, в котором ей исполнится 17, поэтому времени меньше, чем кажется.",
     "faq.q4": "Когда девочки смогут воспользоваться деньгами?",
     "faq.a4":
-      "Не раньше 18 лет. Затем счёт становится её личным traditional IRA: можно продолжать инвестировать или снимать деньги. Доход при снятии облагается подоходным налогом, а до 59½ лет может взиматься дополнительный налог 10% — за исключением, например, расходов на учёбу или покупку первого жилья (до $10 000).",
+      "Не раньше 18 лет. Затем счёт становится её личным <a href=\"https://www.irs.gov/retirement-plans/traditional-iras\" target=\"_blank\" rel=\"noopener\">traditional IRA</a>: можно продолжать инвестировать или снимать деньги. Доход при снятии облагается подоходным налогом, а до 59½ лет может взиматься <a href=\"https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-exceptions-to-tax-on-early-distributions\" target=\"_blank\" rel=\"noopener\">дополнительный налог 10%</a> — за исключением, например, расходов на учёбу или покупку первого жилья (до $10 000).",
     "faq.q5": "Можно ли получить налоговый вычет за подарок?",
     "faq.a5":
       "Нет. Взносы частных лиц делаются из уже облагаемых налогом денег, без вычета. Ваш подарок становится частью её «базы», которую позже можно снять без налога. Это не налоговая консультация; за деталями обратитесь к специалисту.",
@@ -334,7 +337,7 @@ window.I18N = {
       "Конечно. Отправьте подарок Мише через {payMethodsText}, указав имя девочки в комментарии, и он внесёт его на её счёт. Подробнее — в разделе <a href=\"#give\">«Как подарить»</a>.",
     "faq.q7": "Это официальный сайт Trump Accounts?",
     "faq.a7":
-      "Нет. Это личная страница семьи Веры и Алисы. Мы не связаны с Министерством финансов США, IRS или программой Trump Accounts. Официальная информация — на <a href=\"https://trumpaccount.com/us/en/support/articles/overview/\" target=\"_blank\" rel=\"noopener\">trumpaccount.com</a> (на английском).",
+      "Нет. Это личная страница семьи Веры и Алисы. Мы не связаны с <a href=\"https://home.treasury.gov/\" target=\"_blank\" rel=\"noopener\">Министерством финансов США</a>, <a href=\"https://www.irs.gov/\" target=\"_blank\" rel=\"noopener\">IRS</a> или программой Trump Accounts. Официальная информация — на <a href=\"https://trumpaccount.com/us/en/support/articles/overview/\" target=\"_blank\" rel=\"noopener\">trumpaccount.com</a> (на английском).",
     "faq.q8": "А можно всё-таки принести что-нибудь небольшое?",
     "faq.a8":
       "Конечно! Открытка, рисунок или маленький сюрприз всегда в радость. Просто нам хочется, чтобы главный подарок продолжал расти.",
@@ -343,6 +346,9 @@ window.I18N = {
     "footer.legal":
       "Личная семейная страница. Не связана с Министерством финансов США, IRS, программой Trump Accounts или её партнёрами и не одобрена ими. Расчёты роста — гипотетические примеры, а не финансовая, инвестиционная или налоговая консультация.",
     "footer.top": "Наверх",
+    "footer.pagesLabel": "Страницы",
+    "footer.family": "Общая страница",
+    "footer.kidPage": "Страница {nameGen}",
 
     "kid.meta.title": "{name} · Подарок, который растёт",
     "kid.meta.description": "На день рождения и праздники {nameGen}: подарок, который растёт, взнос на её Trump Account.",

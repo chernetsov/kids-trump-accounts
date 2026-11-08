@@ -483,11 +483,21 @@
     io.observe(chartEl);
   }
 
+  function renderFooterPages() {
+    var pages = [{ href: ROOT || "./", label: t("footer.family"), current: !FOCUS }].concat(CFG.kids.map(function (k) {
+      return { href: ROOT + k.id + "/", label: t("footer.kidPage", nameVars(k)), current: FOCUS === k };
+    }));
+    document.getElementById("footer-pages").innerHTML = pages.map(function (p) {
+      return '<a href="' + esc(p.href) + '"' + (p.current ? ' aria-current="page"' : "") + ">" + esc(p.label) + "</a>";
+    }).join("");
+  }
+
   function renderAll(first) {
     applyStatic();
     renderHero();
     renderKids();
     renderPay();
+    renderFooterPages();
     updateCalc(false);
     if (first) { observeReveal(); startChartWhenVisible(); }
   }
