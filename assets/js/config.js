@@ -48,6 +48,13 @@ window.SITE_CONFIG = {
     },
   ],
 
+  // Optional, for US relatives who'd rather pay Misha directly. Leave url "" to hide the Zelle block.
+  // QR made with: python3 tools/make_qr.py zelle "<url>"
+  zelle: {
+    url: "https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiTUlLSEFJTCIsImFjdGlvbiI6InBheW1lbnQiLCJ0b2tlbiI6ImNoZXJuZXRzb3ZAZ21haWwuY29tIn0=",
+    qrImage: "assets/qr/zelle-qr.svg",
+  },
+
   // For relatives outside the US. Misha receives the gift and adds it to the girl's account.
   abroad: {
     // Methods left empty are hidden. Only public handles/links here (no email, phone or address).

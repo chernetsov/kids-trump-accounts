@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Make a clean, high-contrast QR code for a child's contribution link, and verify it.
+"""Make a clean, high-contrast QR code for a contribution or payment link, and verify it.
 
 Writes assets/qr/<id>-qr.svg (used on the site) and assets/qr/<id>-qr.png (1000+ px, for
 printing on invites), then decodes the PNG, including a small, screen-sized copy, with two

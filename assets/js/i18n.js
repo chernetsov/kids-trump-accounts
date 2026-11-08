@@ -104,6 +104,13 @@ window.I18N = {
     "give.us.s2": "Pay with a U.S. <strong>bank account</strong> or <strong>debit card</strong> on the official Trump Accounts page.",
     "give.us.s3": "Enter the amount. The page shows how much can still be given this year.",
     "give.us.note": "Debit card gifts usually arrive within minutes; bank transfers take up to 5 business days.",
+    "give.zelle.kicker": "Or pay Misha directly",
+    "give.zelle.title": "Zelle",
+    "give.zelle.text":
+      "Send with <strong>Zelle</strong> from your bank’s app: scan the code, or tap the button on your phone. Put the girl’s name in the memo, and Misha will add it to her account.",
+    "give.zelle.note": "Zelle works only with U.S. bank accounts.",
+    "give.zelle.button": "Pay with Zelle",
+    "give.zelle.qrAlt": "Zelle QR code for paying Misha",
     "give.ab.tag": "Europe & everywhere else",
     "give.ab.title": "Send it to Misha",
     "give.ab.lead":
@@ -167,6 +174,8 @@ window.I18N = {
     "kid.kids.lead": "Tap Contribute, or scan the QR code with your phone camera.",
     "kid.give.us.s1": "Tap <strong>Contribute</strong> on {name}’s card, or scan her QR code.",
     "kid.give.ab.s2": "In the note, write <em>“{name}”</em> and the occasion, e.g. <em>“{name}, birthday”</em>.",
+    "kid.give.zelle.text":
+      "Send with <strong>Zelle</strong> from your bank’s app: scan the code, or tap the button on your phone. Write <em>“{name}”</em> in the memo, and Misha will add it to her account.",
     "kid.card.title": "A gift for {name}’s future",
     "kid.card.note": "Every gift goes straight into {name}’s own account and stays invested until she turns 18.",
     "kid.sibling": "Also celebrating {sibling}?",
@@ -278,6 +287,13 @@ window.I18N = {
     "give.us.s2": "Оплатите с американского <strong>банковского счёта</strong> или <strong>дебетовой карты</strong> на официальной странице Trump Accounts.",
     "give.us.s3": "Введите сумму. Страница покажет, сколько ещё можно внести в этом году.",
     "give.us.note": "Платёж с дебетовой карты обычно приходит за несколько минут, банковский перевод — до 5 рабочих дней.",
+    "give.zelle.kicker": "Или напрямую Мише",
+    "give.zelle.title": "Zelle",
+    "give.zelle.text":
+      "Отправьте через <strong>Zelle</strong> в приложении своего банка: отсканируйте код или нажмите кнопку на телефоне. В комментарии укажите имя девочки, и Миша внесёт деньги на её счёт.",
+    "give.zelle.note": "Zelle работает только с американскими банковскими счетами.",
+    "give.zelle.button": "Оплатить через Zelle",
+    "give.zelle.qrAlt": "QR-код Zelle для перевода Мише",
     "give.ab.tag": "Европа и другие страны",
     "give.ab.title": "Через Мишу",
     "give.ab.lead":
@@ -341,6 +357,8 @@ window.I18N = {
     "kid.kids.lead": "Нажмите «Подарить» или отсканируйте QR-код камерой телефона.",
     "kid.give.us.s1": "Нажмите <strong>«Подарить»</strong> на карточке {nameGen} или отсканируйте QR-код.",
     "kid.give.ab.s2": "В комментарии укажите имя и повод, например <em>«{name}, день рождения»</em>.",
+    "kid.give.zelle.text":
+      "Отправьте через <strong>Zelle</strong> в приложении своего банка: отсканируйте код или нажмите кнопку на телефоне. В комментарии напишите <em>«{name}»</em>, и Миша внесёт деньги на её счёт.",
     "kid.card.title": "Подарок в будущее {nameGen}",
     "kid.card.note": "Каждый подарок поступает прямо на собственный счёт {nameGen} и остаётся инвестированным до её 18 лет.",
     "kid.sibling": "Поздравляете и {siblingAcc}?",

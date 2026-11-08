@@ -397,6 +397,20 @@
         "</div>" + (btns ? '<div class="pay__btns">' + btns + "</div>" : "") + "</div>";
     }).join("");
 
+    var zelle = CFG.zelle || {};
+    if (zelle.url) {
+      document.getElementById("zelle").hidden = false;
+      document.getElementById("zelle-link").href = zelle.url;
+      var zq = document.getElementById("zelle-qr");
+      zq.hidden = !zelle.qrImage;
+      if (zelle.qrImage) {
+        zq.href = asset(zelle.qrImage.replace(/\.svg$/, ".png"));
+        var zi = document.getElementById("zelle-qr-img");
+        zi.src = asset(zelle.qrImage);
+        zi.alt = t("give.zelle.qrAlt");
+      }
+    }
+
     var contact = document.getElementById("contact-link");
     if (CFG.contactUrl) {
       contact.href = CFG.contactUrl;
