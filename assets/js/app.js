@@ -397,19 +397,35 @@
         "</div>" + (btns ? '<div class="pay__btns">' + btns + "</div>" : "") + "</div>";
     }).join("");
 
-    var zelle = CFG.zelle || {};
-    if (zelle.url) {
-      document.getElementById("zelle").hidden = false;
-      document.getElementById("zelle-link").href = zelle.url;
-      var zq = document.getElementById("zelle-qr");
-      zq.hidden = !zelle.qrImage;
-      if (zelle.qrImage) {
-        zq.href = asset(zelle.qrImage.replace(/\.svg$/, ".png"));
-        var zi = document.getElementById("zelle-qr-img");
-        zi.src = asset(zelle.qrImage);
-        zi.alt = t("give.zelle.qrAlt");
+    var direct = CFG.direct || {};
+    var directMethods = [
+      { key: "zelle", label: "Zelle", mark: "Z", data: direct.zelle || {} },
+      { key: "venmo", label: "Venmo", mark: "V", data: direct.venmo || {} },
+    ].filter(function (m) { return m.data.url; });
+    document.getElementById("direct").hidden = !directMethods.length;
+    document.getElementById("direct-methods").innerHTML = directMethods.map(function (m) {
+      var d = m.data;
+      var btns = (d.handle ? '<button type="button" class="btn btn--ghost" data-copy="' + esc(d.handle) + '">' + esc(t("give.ab.copy")) + "</button>" : "") +
+        '<a class="btn btn--primary" href="' + esc(d.url) + '" target="_blank" rel="noopener">' + m.label + " ↗</a>";
+      return '<div class="direct__item"><div class="direct__body">' +
+        '<div class="direct__head"><span class="pay__logo pay__logo--' + m.key + '" aria-hidden="true">' + m.mark + "</span>" +
+        '<div class="pay__info"><div class="pay__name">' + m.label + '</div><div class="pay__handle">' + esc(d.handle || t("give." + m.key + ".sub")) + "</div></div></div>" +
+        '<p class="direct__note">' + esc(t("give." + m.key + ".note")) + "</p>" +
+        '<div class="pay__btns">' + btns + "</div></div>" +
+        (d.qrImage
+          ? '<a class="direct__qr" href="' + esc(asset(d.qrImage.replace(/\.svg$/, ".png"))) + '" target="_blank" rel="noopener">' +
+            '<img src="' + esc(asset(d.qrImage)) + '" alt="' + esc(t("give." + m.key + ".qrAlt")) + '" width="200" height="200" data-qr></a>'
+          : "") +
+        "</div>";
+    }).join("");
+    // make_qr.py draws SVGs at 10 units per module; show each code at a whole number of px per module so it stays sharp.
+    document.querySelectorAll("#direct-methods img[data-qr]").forEach(function (img) {
+      function fit() {
+        var modules = Math.round(img.naturalWidth / 10);
+        if (modules) img.width = img.height = modules * Math.max(1, Math.floor(200 / modules));
       }
-    }
+      if (img.complete) fit(); else img.addEventListener("load", fit);
+    });
 
     var contact = document.getElementById("contact-link");
     if (CFG.contactUrl) {

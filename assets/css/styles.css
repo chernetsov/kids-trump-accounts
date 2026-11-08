@@ -492,21 +492,19 @@ html[data-kid][lang="ru"] .display { font-size: clamp(46px, 5.4vw, 76px); }
 .pay__logo--paypal { background: #0b2a6b; }
 .pay__logo--zelle { background: #6d1ed4; font-size: 16px; }
 
-.zelle {
-  margin-top: 22px; padding: 18px; border-radius: 22px; background: var(--bg); border: 1px solid var(--line);
-  display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: center;
-}
-.zelle__head { display: flex; align-items: center; gap: 12px; }
-.zelle__kicker { margin: 0; font-size: 12.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--gold); }
-.zelle__title { margin: 0; font-size: 17px; font-weight: 650; color: var(--ink); }
-.zelle__text { margin: 12px 0 0; font-size: 14.5px; line-height: 1.55; color: var(--ink-2); }
-.zelle__text strong { color: var(--ink); font-weight: 650; }
-.zelle__note { margin: 8px 0 0; font-size: 13.5px; color: var(--muted); }
-.zelle__btn { --h: 42px; margin-top: 14px; padding: 0 18px; font-size: 14.5px; }
-/* 195px = exactly 3px per QR module, so edges stay sharp */
-.zelle__qr { display: block; width: 197px; height: 197px; border-radius: 14px; overflow: hidden; background: #fff; border: 1px solid var(--line); transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease); }
-.zelle__qr:hover { transform: scale(1.03); box-shadow: var(--shadow); }
-.zelle__qr img { display: block; width: 195px; height: 195px; }
+.pay__logo--venmo { background: #008cff; font-size: 16px; }
+
+.direct { margin-top: 22px; padding: 20px; border-radius: 22px; background: var(--bg); border: 1px solid var(--line); }
+.direct__title { margin: 0; font-size: 12.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+.direct__text { margin: 8px 0 0; font-size: 14.5px; line-height: 1.55; color: var(--ink-2); }
+.direct__text strong { color: var(--ink); font-weight: 650; }
+.direct__item { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: center; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); }
+.direct__body { min-width: 0; }
+.direct__head { display: flex; align-items: center; gap: 12px; }
+.direct__note { margin: 10px 0 12px; font-size: 13.5px; color: var(--muted); }
+.direct__qr { display: block; padding: 0; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--line); line-height: 0; transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease); }
+.direct__qr:hover { transform: scale(1.03); box-shadow: var(--shadow); }
+.direct__qr img { display: block; max-width: none; }
 .pay__info { min-width: 0; flex: 1; }
 .pay__name { font-weight: 650; font-size: 15px; }
 .pay__handle { font-size: 14px; color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -631,9 +629,9 @@ html[data-kid][lang="ru"] .display { font-size: clamp(46px, 5.4vw, 76px); }
   .pay__item { flex-wrap: wrap; }
   .pay__btns { width: 100%; }
   .pay__btns .btn { flex: 1; }
-  .zelle { grid-template-columns: 1fr; justify-items: center; }
-  .zelle__body { justify-self: stretch; }
-  .zelle__btn { width: 100%; }
+  .direct { padding: 18px 16px; }
+  .direct__item { grid-template-columns: 1fr; justify-items: center; }
+  .direct__body { justify-self: stretch; }
   .record { flex-direction: column; align-items: flex-start; padding: 26px 22px; border-radius: 28px; gap: 14px; }
   .faq__a { padding-right: 4px; }
   .display { font-size: clamp(50px, 14vw, 72px); }
