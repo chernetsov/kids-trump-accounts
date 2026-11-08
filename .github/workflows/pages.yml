@@ -31,6 +31,9 @@ jobs:
           cp -r index.html assets _site/
           python3 tools/build_kid_pages.py --out _site
           touch _site/.nojekyll
+          # Browsers cache files for 10 minutes on GitHub Pages; versioned CSS/JS URLs keep a new page from loading old styles.
+          sed -i -E "s#(assets/(css|js)/[a-z0-9_-]+\.(css|js))\"#\1?v=${GITHUB_SHA::8}\"#g" _site/index.html _site/*/index.html
+          grep -q "styles.css?v=" _site/index.html
 
       - uses: actions/configure-pages@v5
 
