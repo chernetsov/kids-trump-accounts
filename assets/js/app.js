@@ -17,6 +17,7 @@
   function t(key, vars) {
     var s = (DICT[lang] && DICT[lang][key]) || DICT.en[key] || key;
     if (FOCUS) vars = Object.assign(focusVars(), vars || {});
+    if (s.indexOf("{payMethods") >= 0) vars = Object.assign({ payMethods: payMethodNames(true), payMethodsText: payMethodNames(false) }, vars || {});
     if (vars) s = s.replace(/\{(\w+)\}/g, function (m, k) { return vars[k] != null ? vars[k] : m; });
     return s;
   }
@@ -367,12 +368,21 @@
   }
 
   /* ───────────── payment methods ───────────── */
-  function renderPay() {
-    var methods = [
+  var PAY_METHODS = (function () {
+    var all = [
       { key: "wise", label: "Wise", mark: "W", data: CFG.abroad.wise || {} },
       { key: "paypal", label: "PayPal", mark: "P", data: CFG.abroad.paypal || {} },
     ];
-    document.getElementById("pay-methods").innerHTML = methods.map(function (m) {
+    // Unfilled methods are hidden; only if none are filled do they all show as "coming soon".
+    var ready = all.filter(function (m) { return m.data.url || m.data.handle; });
+    return ready.length ? ready : all;
+  })();
+  function payMethodNames(strong) {
+    return PAY_METHODS.map(function (m) { return strong ? "<strong>" + m.label + "</strong>" : m.label; })
+      .join(" " + t("give.ab.or") + " ");
+  }
+  function renderPay() {
+    document.getElementById("pay-methods").innerHTML = PAY_METHODS.map(function (m) {
       var handle = m.data.handle || "";
       var url = m.data.url || "";
       var shownHandle = handle || url.replace(/^https?:\/\//, "");

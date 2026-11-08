@@ -108,10 +108,11 @@ window.I18N = {
     "give.ab.title": "Send it to Misha",
     "give.ab.lead":
       "The official page takes U.S. bank accounts and debit cards. From abroad, send your gift to Misha and he’ll add it to the girl’s account.",
-    "give.ab.s1": "Send via <strong>Wise</strong> or <strong>PayPal</strong> (in USD or your own currency).",
+    "give.ab.s1": "Send via {payMethods} (in USD or your own currency).",
     "give.ab.s2": "In the note, write the girl’s name and occasion, e.g. <em>“Vera, birthday”</em>.",
     "give.ab.s3": "Misha deposits it into her Trump Account and lets you know.",
     "give.ab.soon": "details coming soon",
+    "give.ab.or": "or",
     "give.ab.copy": "Copy",
     "give.ab.copied": "Copied",
     "give.record.title": "Every gift is recorded.",
@@ -138,7 +139,7 @@ window.I18N = {
       "No. Gifts from individuals go in after tax, with no deduction. Your gift becomes part of her “basis,” which she can later withdraw tax-free. This isn’t tax advice; for specifics, ask a tax professional.",
     "faq.q6": "I live outside the US. Can I still give?",
     "faq.a6":
-      "Absolutely. Send your gift to Misha via Wise or PayPal with the girl’s name in the note, and he’ll add it to her account. See <a href=\"#give\">How to give</a>.",
+      "Absolutely. Send your gift to Misha via {payMethodsText} with the girl’s name in the note, and he’ll add it to her account. See <a href=\"#give\">How to give</a>.",
     "faq.q7": "Is this an official Trump Accounts website?",
     "faq.a7":
       "No. This is a personal page made by Vera and Alisa’s family. We aren’t affiliated with the U.S. Treasury, the IRS, or the Trump Accounts program. For official information, visit <a href=\"https://trumpaccount.com/us/en/support/articles/overview/\" target=\"_blank\" rel=\"noopener\">trumpaccount.com</a>.",
@@ -281,10 +282,11 @@ window.I18N = {
     "give.ab.title": "Через Мишу",
     "give.ab.lead":
       "Официальная страница принимает только американские банковские счета и дебетовые карты. Из-за границы отправьте подарок Мише, и он внесёт его на счёт девочки.",
-    "give.ab.s1": "Отправьте через <strong>Wise</strong> или <strong>PayPal</strong> (в долларах или в своей валюте).",
+    "give.ab.s1": "Отправьте через {payMethods} (в долларах или в своей валюте).",
     "give.ab.s2": "В комментарии укажите имя девочки и повод, например <em>«Вера, день рождения»</em>.",
     "give.ab.s3": "Миша внесёт деньги на её Trump Account и сообщит вам.",
     "give.ab.soon": "реквизиты скоро появятся",
+    "give.ab.or": "или",
     "give.ab.copy": "Копировать",
     "give.ab.copied": "Скопировано",
     "give.record.title": "Каждый подарок записан.",
@@ -311,7 +313,7 @@ window.I18N = {
       "Нет. Взносы частных лиц делаются из уже облагаемых налогом денег, без вычета. Ваш подарок становится частью её «базы», которую позже можно снять без налога. Это не налоговая консультация; за деталями обратитесь к специалисту.",
     "faq.q6": "Я живу не в США. Могу ли я подарить?",
     "faq.a6":
-      "Конечно. Отправьте подарок Мише через Wise или PayPal, указав имя девочки в комментарии, и он внесёт его на её счёт. Подробнее — в разделе <a href=\"#give\">«Как подарить»</a>.",
+      "Конечно. Отправьте подарок Мише через {payMethodsText}, указав имя девочки в комментарии, и он внесёт его на её счёт. Подробнее — в разделе <a href=\"#give\">«Как подарить»</a>.",
     "faq.q7": "Это официальный сайт Trump Accounts?",
     "faq.a7":
       "Нет. Это личная страница семьи Веры и Алисы. Мы не связаны с Министерством финансов США, IRS или программой Trump Accounts. Официальная информация — на <a href=\"https://trumpaccount.com/us/en/support/articles/overview/\" target=\"_blank\" rel=\"noopener\">trumpaccount.com</a> (на английском).",

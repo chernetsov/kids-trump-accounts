@@ -1,7 +1,7 @@
 /*
  * ─────────────────────────────────────────────────────────────────────────
  *  SITE CONFIG: the only file you need to edit for links, handles and photos.
- *  Anything left as "" shows a friendly "coming soon" state on the site.
+ *  Most values left as "" show a friendly "coming soon" state on the site.
  *  Search this file for "PLACEHOLDER" to find everything still to fill in.
  * ─────────────────────────────────────────────────────────────────────────
  */
@@ -50,10 +50,10 @@ window.SITE_CONFIG = {
 
   // For relatives outside the US. Misha receives the gift and adds it to the girl's account.
   abroad: {
+    // Methods left empty are hidden. Only public handles/links here (no email, phone or address).
     // PLACEHOLDER: Wise. Paste a Wise payment link (wise.com/pay/me/...) and/or the @Wisetag.
     wise: { url: "", handle: "" },
-    // PLACEHOLDER: PayPal. Paste a paypal.me link and/or the PayPal email.
-    paypal: { url: "", handle: "" },
+    paypal: { url: "https://paypal.me/mchernetsov", handle: "@mchernetsov" },
   },
 
   // PLACEHOLDER (optional): how relatives can reach Misha with questions.
