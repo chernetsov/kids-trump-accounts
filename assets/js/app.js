@@ -147,7 +147,8 @@
     var d = FOCUS ? daysToBirthday(FOCUS, now) : 0;
     var cards = FOCUS
       ? card(FOCUS, "polaroid--solo") + '<div class="bday-chip"><svg class="bday-chip__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="4" rx="1"/><path d="M5 13v7h14v-7M12 9v11M12 9c-1.5-3-5-4-5-1.5S10 9 12 9zm0 0c1.5-3 5-4 5-1.5S14 9 12 9z"/></svg>' +
-        esc(d === 0 ? t("kids.today") : d === 1 ? t("kids.next1") : t("kid.hero.countdown", { n: d })) + "</div>"
+        '<div><div class="bday-chip__date">' + esc(monthDay(FOCUS)) + "</div>" +
+        '<div class="bday-chip__count">' + esc(d === 0 ? t("kids.today") : d === 1 ? t("kids.next1") : t("kid.hero.countdown", { n: d })) + "</div></div></div>"
       : card(a, "polaroid--a") + card(b, "polaroid--b");
     el.innerHTML = cards +
       '<div class="growth-chip">' +
