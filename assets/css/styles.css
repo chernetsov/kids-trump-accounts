@@ -167,6 +167,14 @@ html[lang="ru"] .display { font-size: clamp(50px, 7vw, 92px); }
 }
 .hero__grid { position: relative; display: grid; grid-template-columns: 1.08fr 1fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
 .hero__copy .lead { margin-bottom: 34px; }
+.hero__copy .lead strong { color: var(--ink); font-weight: 650; }
+.hero__badge {
+  display: inline-flex; align-items: center; gap: 10px; margin: 0 0 20px; padding: 10px 18px 10px 14px;
+  border-radius: 999px; background: var(--navy); color: #e9edf5; font-size: 15.5px; line-height: 1.35;
+  box-shadow: 0 8px 22px -10px rgba(31, 42, 68, 0.6);
+}
+.hero__badge svg { width: 20px; height: 20px; flex: none; color: var(--gold-2); }
+.hero__badge strong { color: var(--gold-3); font-weight: 650; white-space: nowrap; }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; }
 .hero__trust {
   display: flex; align-items: center; gap: 8px; margin: 26px 0 0;
@@ -598,6 +606,7 @@ html[data-kid][lang="ru"] .display { font-size: clamp(46px, 5.4vw, 76px); }
   .nav__cta { display: none; }
   .brand { font-size: 15px; }
   .hero__ctas .btn { width: 100%; }
+  .hero__badge { border-radius: 18px; font-size: 14.5px; padding: 9px 16px 9px 13px; }
   .hero__art { aspect-ratio: 1 / 1.08; }
   .polaroid { width: 54%; padding: 7px 7px 0; border-radius: 20px; }
   .polaroid--a { top: 14%; }

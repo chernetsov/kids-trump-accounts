@@ -16,8 +16,9 @@ window.I18N = {
 
     "hero.eyebrow": "Birthdays & holidays wish list",
     "hero.title": "Give a gift that <em>grows</em>.",
+    "hero.badge": "Every gift goes into the girls’ <strong>Trump Accounts</strong>",
     "hero.lead":
-      "Instead of another toy, consider a contribution to Vera’s or Alisa’s Trump Account. It stays invested for years, so even a small gift today can become something meaningful by the time they’re grown.",
+      "Instead of another toy, contribute to Vera’s or Alisa’s <strong>Trump Account</strong>, the new U.S. investment account for kids. Every gift stays invested for years, so even a small one today can become something meaningful by the time they’re grown.",
     "hero.cta1": "Give to Vera or Alisa",
     "hero.cta2": "See how it grows",
     "hero.trust": "A personal family page, not an official Trump Accounts site.",
@@ -168,9 +169,10 @@ window.I18N = {
     "kid.nav.kids": "Give",
     "kid.hero.eyebrow": "{name}’s birthday · {date}",
     "kid.hero.title": "Give {name} a gift that <em>grows</em>.",
+    "kid.hero.badge": "Every gift goes into {name}’s <strong>Trump Account</strong>",
     "kid.hero.lead":
-      "Instead of another toy, consider a contribution to {name}’s Trump Account. It stays invested for years, so even a small gift today can become something meaningful by the time she’s grown.",
-    "kid.hero.cta1": "Give to {name}",
+      "Instead of another toy, contribute to {name}’s <strong>Trump Account</strong>, the new U.S. investment account for kids. Every gift stays invested for years, so even a small one today can become something meaningful by the time she’s grown.",
+    "kid.hero.cta1": "Give to {name}’s Trump Account",
     "kid.hero.countdown": "Birthday in {n} days",
     "kid.calc.lead": "Pick an amount and see how it might grow for {name}, based on her age today. Time does most of the work.",
     "kid.kids.eyebrow": "Give to {name}",
@@ -203,8 +205,9 @@ window.I18N = {
 
     "hero.eyebrow": "На дни рождения и праздники",
     "hero.title": "Подарок, который <em>растёт</em>.",
+    "hero.badge": "Каждый подарок — на счета <strong>Trump Account</strong> девочек",
     "hero.lead":
-      "Вместо очередной игрушки подарите взнос на счёт Trump Account Веры или Алисы. Деньги будут инвестированы на годы вперёд, и даже небольшой подарок сегодня может превратиться в заметную сумму к тому времени, когда девочки вырастут.",
+      "Вместо очередной игрушки сделайте взнос на <strong>Trump Account</strong> Веры или Алисы — новый американский инвестиционный счёт для детей. Каждый подарок инвестируется на годы вперёд, и даже небольшая сумма сегодня может превратиться в заметную к тому времени, когда девочки вырастут.",
     "hero.cta1": "Подарить Вере или Алисе",
     "hero.cta2": "Посмотреть, как растёт",
     "hero.trust": "Личная семейная страница, не официальный сайт Trump Accounts.",
@@ -355,9 +358,10 @@ window.I18N = {
     "kid.nav.kids": "Подарить",
     "kid.hero.eyebrow": "День рождения {nameGen} · {date}",
     "kid.hero.title": "Подарите {nameDat} подарок, который <em>растёт</em>.",
+    "kid.hero.badge": "Каждый подарок — на счёт <strong>Trump Account</strong> {nameGen}",
     "kid.hero.lead":
-      "Вместо очередной игрушки подарите взнос на счёт Trump Account {nameGen}. Деньги будут инвестированы на годы вперёд, и даже небольшой подарок сегодня может превратиться в заметную сумму к тому времени, когда она вырастет.",
-    "kid.hero.cta1": "Подарить {nameDat}",
+      "Вместо очередной игрушки сделайте взнос на <strong>Trump Account</strong> {nameGen} — новый американский инвестиционный счёт для детей. Каждый подарок инвестируется на годы вперёд, и даже небольшая сумма сегодня может превратиться в заметную к тому времени, когда она вырастет.",
+    "kid.hero.cta1": "Взнос на Trump Account {nameGen}",
     "kid.hero.countdown": "До дня рождения: {n} дн.",
     "kid.calc.lead": "Выберите сумму и посмотрите, как она может вырасти для {nameGen} с учётом её возраста. Основную работу делает время.",
     "kid.kids.eyebrow": "Подарок для {nameGen}",
