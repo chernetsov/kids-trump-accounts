@@ -51,8 +51,7 @@ window.SITE_CONFIG = {
   // For relatives outside the US. Misha receives the gift and adds it to the girl's account.
   abroad: {
     // Methods left empty are hidden. Only public handles/links here (no email, phone or address).
-    // PLACEHOLDER: Wise. Paste a Wise payment link (wise.com/pay/me/...) and/or the @Wisetag.
-    wise: { url: "", handle: "" },
+    wise: { url: "https://wise.com/pay/me/mikhailc25", handle: "@mikhailc25" },
     paypal: { url: "https://paypal.me/mchernetsov", handle: "@mchernetsov" },
   },
 
